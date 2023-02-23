@@ -1,0 +1,11 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffffff;
+	height: 10vh;
+	width: 100%;
+	background-color: #202121;
+    font-family: 'Carter One', cursive;
+    font-size: 3rem;
+}
