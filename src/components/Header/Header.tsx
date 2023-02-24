@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <>
             <div className={styles.header}>
-                react-weather
+                react-ts-weather
             </div>
         </>
     )

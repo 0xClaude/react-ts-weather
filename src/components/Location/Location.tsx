@@ -1,9 +1,9 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, Dispatch, FormEvent, SetStateAction, useState } from "react";
 import styles from "./Location.module.css";
 
 interface locationProps {
 	location: string;
-	setLocation: Function;
+	setLocation: Dispatch<SetStateAction<string>>;
 }
 
 export default function Location(props: locationProps) {
