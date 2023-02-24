@@ -1,4 +1,4 @@
-# react-weather
+# react-ts-weather
 
 A simple weather app made with vite and react. It uses the OpenWeather API under the hood. Just enter the city name and enjoy your five day weather forecast.
 
