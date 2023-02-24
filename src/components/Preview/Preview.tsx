@@ -1,9 +1,13 @@
-import styles from "./Preview.module.css"
+import styles from "./Preview.module.css";
 
-export default function Preview() {
-    return (
-        <>
-            <h1 className={styles.title}>Weather forecast for the next four days</h1>
-        </>
-    );
+interface previewProps {
+	city: string;
+}
+
+export default function Preview(props: previewProps) {
+	return (
+		<>
+			<h1 className={styles.title}>Weather forecast for {props.city}</h1>
+		</>
+	);
 }

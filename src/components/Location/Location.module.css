@@ -1,0 +1,12 @@
+.searchbar {
+    margin: 2rem 0 0 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.searchbar input {
+    width: 40%;
+    height: 2rem;
+    font-size: 1.5rem;
+}

@@ -1,9 +1,13 @@
 import styles from "./Day.module.css"
 
-export default function Day() {
+interface props {
+    day: string
+}
+
+export default function Day(props: props) {
     return (
         <>
-            <div className={styles.day}><p>Day 1</p></div>
+            <div className={styles.day}><p>{String(props.day)}</p></div>
 
         </>
     )
