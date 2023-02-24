@@ -1,7 +1,7 @@
 import styles from "./Preview.module.css";
 
 interface previewProps {
-	city: string;
+	city: string
 }
 
 export default function Preview(props: previewProps) {

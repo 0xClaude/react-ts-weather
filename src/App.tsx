@@ -31,7 +31,6 @@ function App() {
 		<div className="App">
 			<Header />
 			{!loading && !error && <Location {...locationProps} />}
-			{loading && !error && <p>Please wait</p>}
 			{!loading && !error && <Preview city={location} />}
 			{!loading && !error && <Card lat={lat} lon={lon} />}
 		</div>

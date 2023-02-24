@@ -1,19 +1,17 @@
 import styles from "./Day.module.css";
 
-interface props {
-	day: string,
-    key: number
+interface Props {
+	day: string;
 }
 
-export default function Day(props: props) {
+export default function Day(props: Props) {
 	return (
 		<>
-			<div className={styles.wrapper} key={props.key}>
+			<div className={styles.wrapper}>
 				<div className={styles.dayName}>
 					<p>{String(props.day)}</p>
 				</div>
-                <div className={styles.forecast}>s
-                Test</div>
+				<div className={styles.forecast}>bleh</div>
 			</div>
 		</>
 	);

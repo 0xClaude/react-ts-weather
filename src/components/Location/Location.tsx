@@ -1,12 +1,12 @@
 import { ChangeEvent, Dispatch, FormEvent, SetStateAction, useState } from "react";
 import styles from "./Location.module.css";
 
-interface locationProps {
+interface LocationProps {
 	location: string;
 	setLocation: Dispatch<SetStateAction<string>>;
 }
 
-export default function Location(props: locationProps) {
+export default function Location(props: LocationProps) {
 	const [input, setInput] = useState<string>("");
 
 	const updateInput = (e: ChangeEvent<HTMLInputElement>) => {
