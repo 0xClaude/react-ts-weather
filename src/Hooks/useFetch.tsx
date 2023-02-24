@@ -3,7 +3,7 @@ import axios from "axios";
 
 interface cacheFunction<T> {
 	loading: boolean;
-	data: T | unknown;
+	data: T | null;
 	error: unknown;
 }
 
