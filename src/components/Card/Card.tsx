@@ -3,7 +3,6 @@ import Day from "./Day/Day";
 import namespace from "./apiDefinition";
 
 import useFetch from "../../Hooks/useFetch";
-import { useEffect } from "react";
 
 interface CardProps {
 	lat: number;
@@ -12,44 +11,28 @@ interface CardProps {
 }
 
 const days: number[] = [0, 1, 2, 3, 4];
-//const previewDates: number[] = [0, 7, 15, 23, 31]
-const weekdays: string[] = [
-	"Sunday",
-	"Monday",
-	"Tuesday",
-	"Wednesday",
-	"Thursday",
-	"Friday",
-	"Saturday",
-];
-
-const startDate: Date = new Date();
 
 const Card = ({ lat, lon, API }: CardProps) => {
 	const { loading, data, error } =
 		useFetch<namespace.RootObject>(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API}&units=metric
 	`);
 
-	useEffect(() => {
-		console.log(data);
-	}, [data]);
-
 	const dayCards = days.map((item, index) => {
-		const date = new Date(startDate);
-		date.setDate(startDate.getDate() + Number(item));
-		const dayname = weekdays[date.getDay()];
-
 		if (data && !loading && !error) {
-			const weather = data?.list[item].weather[0].description;
-			const icon = data?.list[item].weather[0].icon;
-			const temperature = data?.list[item].main.temp;
+			const timestamp = new Date(
+				data?.list[item * 8].dt_txt
+			).toDateString();
+			const weather = data?.list[item * 8].weather[0].description;
+			const temperature = data?.list[item * 8].main.temp;
+			const dayProps = {
+				day: timestamp,
+				weather,
+				temperature,
+			};
 
 			return (
 				<div key={index}>
-					<Day day={dayname} />
-					{weather} **
-					{icon} **
-					{temperature}
+					<Day {...dayProps} />
 				</div>
 			);
 		} else {

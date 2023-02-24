@@ -6,8 +6,8 @@ import {
 	useEffect,
 	useState,
 } from "react";
-import styles from "./Location.module.css";
 import useFetch from "../../Hooks/useFetch";
+import styles from "./Location.module.css";
 
 interface LocationProps {
 	location: string;
@@ -39,7 +39,11 @@ export default function Location(props: LocationProps) {
 
 	const updateLocation = (e: FormEvent) => {
 		e.preventDefault();
-		props.setLocation(input);
+		if (input === "") {
+			props.setLocation("Luxembourg");
+		} else {
+			props.setLocation(input);
+		}
 	};
 
 	return (
