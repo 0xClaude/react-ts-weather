@@ -4,6 +4,8 @@ A simple weather app made with vite and react. It uses the OpenWeather API under
 
 This is my first TypeScript project, so it took me longer than planned (roughly one day). A selfmade hook is fetching data from the API.
 
+![Preview picture](https://github.com/0xClaude/react-ts-weather/blob/main/react-ts-weather.png?raw=true)
+
 # Usage
 
 - Create a .env file and fill in your OpenWeather API key:
