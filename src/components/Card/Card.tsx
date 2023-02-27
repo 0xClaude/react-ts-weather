@@ -1,4 +1,3 @@
-import styles from "./Card.module.css";
 import Day from "./Day/Day";
 import namespace from "./apiDefinition";
 
@@ -31,13 +30,13 @@ const Card = ({ lat, lon, API }: CardProps) => {
 			};
 
 			return (
-				<div key={index}>
+				<div key={data?.list[item * 8].dt_txt}>
 					<Day {...dayProps} />
 				</div>
 			);
 		} else {
 			return (
-				<div key={index}>
+				<div key={item}>
 					<p>Loading</p>
 				</div>
 			);
@@ -46,7 +45,9 @@ const Card = ({ lat, lon, API }: CardProps) => {
 
 	return (
 		<>
-			<div className={styles.card}>{dayCards}</div>
+			<div className="text-white shadow-slate-700 shadow-2xl flex flex-row justify-evenly p-10 flex-wrap gap-8 w-4/5 rounded-lg h-3/4 bg-sky-900">
+				{dayCards}
+			</div>
 		</>
 	);
 };

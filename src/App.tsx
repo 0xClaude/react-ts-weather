@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Card from "./components/Card/Card";
 import Header from "./components/Header/Header";
@@ -9,8 +9,8 @@ const API = import.meta.env.VITE_API;
 
 function App() {
 	const [location, setLocation] = useState<string>("Luxembourg");
-	const [lat, setLat] = useState<number>(0);
-	const [lon, setLon] = useState<number>(0);
+	const [lat, setLat] = useState<number>(49.6112768);
+	const [lon, setLon] = useState<number>(6.129799);
 
 	const locationProps = {
 		location,

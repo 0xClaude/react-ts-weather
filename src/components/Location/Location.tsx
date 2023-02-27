@@ -7,7 +7,6 @@ import {
 	useState,
 } from "react";
 import useFetch from "../../Hooks/useFetch";
-import styles from "./Location.module.css";
 
 interface LocationProps {
 	location: string;
@@ -22,7 +21,7 @@ interface LocationProps {
 export default function Location(props: LocationProps) {
 	const [input, setInput] = useState<string>("");
 
-	const { loading, data, error } = useFetch(
+	const { data } = useFetch(
 		`https://api.openweathermap.org/geo/1.0/direct?q=${props.location}&appid=${props.API}`
 	);
 
@@ -39,7 +38,7 @@ export default function Location(props: LocationProps) {
 
 	const updateLocation = (e: FormEvent) => {
 		e.preventDefault();
-		if (input === "") {
+		if (input === "" || input === null || input === undefined) {
 			props.setLocation("Luxembourg");
 		} else {
 			props.setLocation(input);
@@ -48,12 +47,16 @@ export default function Location(props: LocationProps) {
 
 	return (
 		<>
-			<form className={styles.searchbar} onSubmit={updateLocation}>
+			<form className="m-8 flex gap-8 h-8 border-0" onSubmit={updateLocation}>
 				<input
 					type="text"
 					placeholder="Your city"
 					onChange={updateInput}
-				></input>
+					className="rounded-xl bg-gray-600 h-8 p-4 text-white w-64"
+				/>
+				<button type="submit" className="bg-sky-400 hover:bg-sky-900 hover:text-white rounded-md h-8 w-32 px-6">
+					Search
+				</button>
 			</form>
 		</>
 	);

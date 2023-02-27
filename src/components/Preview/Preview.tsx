@@ -1,5 +1,3 @@
-import styles from "./Preview.module.css";
-
 interface previewProps {
 	city: string
 }
@@ -7,7 +5,7 @@ interface previewProps {
 export default function Preview(props: previewProps) {
 	return (
 		<>
-			<h1 className={styles.title}>Weather forecast for {props.city}</h1>
+			<h1 className="text-xl">Weather forecast for {props.city}</h1>
 		</>
 	);
 }
