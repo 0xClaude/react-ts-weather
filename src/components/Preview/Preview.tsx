@@ -5,7 +5,7 @@ interface previewProps {
 export default function Preview(props: previewProps) {
 	return (
 		<>
-			<h1 className="text-xl mb-">Weather forecast for {props.city}</h1>
+			<h1 className="text-xl mb-}">Weather forecast for {props.city}</h1>
 		</>
 	);
 }

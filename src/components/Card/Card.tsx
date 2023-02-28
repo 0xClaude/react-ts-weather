@@ -54,10 +54,14 @@ const Card = ({ lat, lon, API }: CardProps) => {
 			).toLocaleDateString();
 			const weather = data?.list[item * 8].weather[0].description;
 			const temperature = data?.list[item * 8].main.temp;
+			const icon = data?.list[item * 8].weather[0].icon;
+			const rainProbability = data?.list[item * 8].pop;
 			const dayProps = {
 				day: timestamp,
 				weather,
 				temperature,
+				icon,
+				rainProbability
 			};
 
 			return (
