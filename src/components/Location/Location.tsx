@@ -52,7 +52,7 @@ export default function Location(props: LocationProps) {
 					type="text"
 					placeholder="Your city"
 					onChange={updateInput}
-					className="rounded-xl bg-gray-600 h-8 p-4 text-white w-64"
+					className="rounded-xl bg-gray-600 h-8 p-4 text-white w-64 outline-none"
 				/>
 				<button type="submit" className="bg-sky-400 hover:bg-sky-900 hover:text-white rounded-md h-8 w-32 px-6">
 					Search

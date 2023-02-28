@@ -24,7 +24,7 @@ function App() {
 	const cardProps = { lat, lon, API };
 
 	return (
-		<div className="App">
+		<div className="App h-screen">
 			<Header />
 			<Location {...locationProps} />
 			<Preview city={location} />
