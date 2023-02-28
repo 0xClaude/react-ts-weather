@@ -76,7 +76,7 @@ const Card = ({ lat, lon, API }: CardProps) => {
 
 	return (
 		<>
-			<div className="text-white shadow-slate-700 shadow-2xl flex flex-row justify-evenly flex-wrap gap-8 w-4/5 rounded-lg bg-green-800 h-2/3 items-center py-10 mt-4">
+			<div className="text-white shadow-slate-700 shadow-2xl flex flex-row justify-evenly flex-wrap gap-8 w-4/5 rounded-lg  bg-gradient-to-tr from-sky-200 to-sky-700 h-2/3 items-center py-10 mt-4">
 				<div className="border-r border-white w-2/5 h-full items-center flex flex-col pr-8">
 					<p className="text-3xl flex items-center">
 						Forecast for {new Date().toLocaleDateString()}
